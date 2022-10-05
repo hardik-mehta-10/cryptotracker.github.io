@@ -33,28 +33,30 @@
 
   
   
-  <body style="background-image: linear-gradient(to right, #a9cbff, #a3dcff, #adeafb, #c2f5f6, #ddfff5);";>
+  <body>
     <div class="container">
       <div class="text-center">
-        <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-transform:capitalize; margin-top: 40px; color:teal ;">Crypto Tracker</h1>
+        <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-transform:capitalize; margin-top: 40px; color:teal ;"><i>Crypto Tracker</i> </h1>
       </div>
       <div class="text-center my-5">
         <form action="" id="searchForm">
-          <label for="xyz" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: rgb(0, 65, 68);">Coin Type</label>&nbsp;&nbsp;&nbsp;
-          <select name="coinType" id="xyz" style="width:200px; height: 50px;">
+          <label for="xyz" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: rgb(145, 167, 169); font-size: large;">Coin Type</label>&nbsp;&nbsp;&nbsp;
+          <select name="coinType" id="xyz" style="width:400px; height: 50px;">
+            <option selected>Select the cryptocurrency</option>
             <option value="bitcoin">Bitcoin</option>
             <option value="dogecoin">Dogecoin</option>
             <option value="ethereum">Ethereum</option>
             <option value="polkadot">Polkadot</option>
             <option value="tether">Tether</option>
-          </select><br><br><br>
-          <button type="submit" class="btn btn-info" style="border-radius: 10px; width: 200px; height: 50px;">Get Details</button>
+          </select><br><br><br><br>
+          <button type="submit" class="btn btn-primary" style="border-radius: 10px; width: 200px; height: 50px;">Get Details</button>&nbsp; &nbsp;
+          <button type="reset" id="reset" class="btn btn-primary" style="border-radius: 10px; width: 200px; height: 50px;">Reset</button>
         </form>
       </div>
     
       <div class="my-5">
-        <table id="tableResult" border="2" style="padding: 2px; height: 300px; width: 500px; text-align: center;border: 2px solid black; margin: auto;" cellspacing="10">
-
+        <table id="tableResult" border="2" style="padding: 2px; height: 350px; width: 600px; text-align: center;border: 2px solid black; margin: auto;" cellspacing="10" class="table-responsive-lg">
+          
         </table>
       </div>
     </div>

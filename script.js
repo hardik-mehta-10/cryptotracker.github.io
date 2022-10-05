@@ -1,5 +1,6 @@
 const form = document.querySelector("#searchForm");
 const res = document.querySelector("#tableResult");
+const clear = document.querySelector("#reset")
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -18,6 +19,8 @@ const fetchPrice = async (ctype) => {
 
   console.log(r);
 
+  
+
   // $ -> to use any js variable, we use back tick, and jaha variable use karna hai add ${variable name}
   //axios is used for service hit (jis se api data de de hume)
   //await is used -> jab tak response na aa jaaye tab tak wait kare
@@ -28,7 +31,7 @@ const fetchPrice = async (ctype) => {
   const change = r.data.coin.priceChange1d;
   const marketCap = r.data.coin.marketCap;
 
-  res.innerHTML=`<tr style="background-color:navy; color:white; font-weight-600; text-align:center;">
+  res.innerHTML=`<tr style="background-color:skyblue; color:navy; font-weight:bolder; text-align:center;">
   <td>Property</td>
   <td>Value</td>
   </tr>
@@ -53,5 +56,7 @@ const fetchPrice = async (ctype) => {
   <td>${marketCap}</td>
   </tr>`
 
-  
+  clear.addEventListener('click', function(){
+    res.innerHTML=" ";
+  })
 };
